@@ -1,5 +1,5 @@
 <?php
-
+ini_set('session.gc_maxlifetime', 5);
 session_start();
 error_reporting(E_ALL);
 date_default_timezone_set('Asia/Bangkok');

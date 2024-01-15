@@ -29,10 +29,10 @@
     <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../assets/css/adminlte.min.css">
 
-    <link href="../../../assets/css/select2.min.css" rel="stylesheet" />
+    <!-- <link href="../../../assets/css/select2.min.css" rel="stylesheet" /> -->
     
-    <link href="../../../assets/fonts/noto-sans-thai.css" rel="stylesheet">
-    <link href="../../../assets/fonts/VT323.css" rel="stylesheet">
+    <!-- <link href="../../../assets/fonts/noto-sans-thai.css" rel="stylesheet">
+    <link href="../../../assets/fonts/VT323.css" rel="stylesheet"> -->
 
     <!-- <link rel="stylesheet" href="../../../assets/css/styles3.css"> -->
     <link rel="stylesheet" href="../../assets/css/style.css">
