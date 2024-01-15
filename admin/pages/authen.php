@@ -14,8 +14,6 @@
         echo "location.href = '../logout.php'";
         echo "</script>";
     }
-
-
 ?>
 
 
