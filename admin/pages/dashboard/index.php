@@ -34,6 +34,10 @@
     <!-- <link href="../../../assets/fonts/noto-sans-thai.css" rel="stylesheet">
     <link href="../../../assets/fonts/VT323.css" rel="stylesheet"> -->
 
+    <!-- include summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+
+
     <!-- <link rel="stylesheet" href="../../../assets/css/styles3.css"> -->
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../../node_modules/bootstrap-datepicker-thai/css/datepicker.css">
@@ -85,6 +89,7 @@
 <script src="../../plugins/chart.js/Chart.min.js"></script>
 <script src="../../plugins/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js"></script>
 <!-- <script src="../../assets/js/pages/dashboard.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
 
 <script>
@@ -93,12 +98,14 @@
    let Username = '<?php echo $_SESSION['Username'];?>';
    let Name = '<?php echo $_SESSION['Name'];?>';
    let Email = '<?php echo $_SESSION['Email'];?>';
+   let Detail = '<?php echo $_SESSION['Detail'];?>';
    let Status = '<?php echo $_SESSION['Status'];?>';
 
    $(`
      <span style="font-size:14px; font-weight:700; color:blue;">Username : ${Username} </span><br>
      <span style="font-size:14px; font-weight:700; color:blue;">ชื่อ : ${Name} </span><br>
      <span style="font-size:14px; font-weight:700; color:blue;">Email : ${Email} </span><br>
+     <span style="font-size:14px; font-weight:700; color:blue;">Detail : ${Detail} </span><br>
      <span style="font-size:14px; font-weight:700; color:blue;">Status : ${Status} </span><br>
                                     
     `).appendTo('.display')

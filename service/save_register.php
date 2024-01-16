@@ -72,6 +72,8 @@ if($_SERVER['REQUEST_METHOD'] === "POST") {
         $txtPassword = $_POST["txtPassword"];
         $txtName = $_POST["txtName"];
         $txtEmail = $_POST["txtEmail"];
+        $txtDetail = $_POST["txtDetail"];
+        
 
        
 
@@ -81,12 +83,13 @@ if($_SERVER['REQUEST_METHOD'] === "POST") {
             'Password' => $txtPassword,
             'Name' => $txtName,
             'Email' => $txtEmail,
+            'detail' => $txtDetail,
             'Status' => 'USER',
             'SID' => $SID,
             'Active' => 'No'
         );
-        $affected = DB::query("INSERT INTO  member (Username,Password,Name,Email,Status,SID,Active) 
-                                                VALUES (:Username, :Password, :Name, :Email, :Status, :SID, :Active)", $params_created);
+        $affected = DB::query("INSERT INTO  member (Username,Password,Name,Email,detail,Status,SID,Active) 
+                                                VALUES (:Username, :Password, :Name, :Email,:detail, :Status, :SID, :Active)", $params_created);
 
                            
             if($affected){

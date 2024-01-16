@@ -7,7 +7,7 @@
         header('Location: ../../../index.php');  
     }
 
-    if( !isset( $_SESSION['UserID'] ) || time() - $_SESSION['login_time'] > 5)
+    if( !isset( $_SESSION['UserID'] ) || time() - $_SESSION['login_time'] > 3800)
     {
         echo "<script language='javascript'>";
         echo 'alert("SESSION หมดอายุงับ");';

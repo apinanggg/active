@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/waitme/waitMe.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
 
 </head>
@@ -53,14 +54,16 @@
                                                         <td>&nbsp;Name</td>
                                                         <td><input name="txtName" type="text" id="txtName" size="35"></td>
                                                     </tr>
-                                                    <tr>
-                                                    </tr>
+                                                  
                                                     <tr>
                                                         <td>&nbsp;Email</td>
                                                         <td><input name="txtEmail" type="text" id="txtEmail" size="35"></td>
                                                     </tr>
                                                     <tr>
+                                                        <td>&nbsp;Detail</td>
+                                                        <td><textarea id="txtDetail" name="txtDetail"></textarea></td>
                                                     </tr>
+                                                   
                                                     </tbody>
                                                 </table>
 
@@ -137,11 +140,19 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
 <script src="node_modules/waitme/waitMe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
 
 
 <script>
+  $(document).ready(function() {
+        $('#txtDetail').summernote({
+        tabsize: 2,
+        height: 100
+      });
 
+
+    });
          
 
             $('#createItem').on('click', function (e) {
@@ -227,13 +238,11 @@
                 // $('#modal-loading').modal('show')
 
                let formData = new FormData(),
-                
-                serialize = $('#formLogin').serializeArray()
+                   serialize = $('#formLogin').serializeArray()
                
                 serialize.forEach( function (item, index) {
-                    formData.append(item.name, item.value)
+                    formData.append(item.name, item.value) 
                 })
-
 
                 $.ajax({
                     type: 'POST',

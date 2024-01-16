@@ -31,6 +31,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
             $_SESSION['Username'] = $login_check[0]['Username'];
             $_SESSION['Name'] = $login_check[0]['Name'];
             $_SESSION['Email'] = $login_check[0]['Email'];
+            $_SESSION['Detail'] = $login_check[0]['detail'];
             $_SESSION['Status'] = $login_check[0]['Status'];
             $_SESSION['Active'] = $login_check[0]['Active'];
             $_SESSION['login_time'] = time();
